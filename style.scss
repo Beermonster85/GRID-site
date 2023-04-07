@@ -244,17 +244,20 @@ a {
     }
 }
 
-.middle_content {
-    background-color: $brandColor_secondary;
+.grid_middleContent {
+    display: grid;
+    grid-template-columns: 362px 362px 1fr;
+    grid-template-rows: 389px 389px;
+    gap: 30px;
+    background-color: #020a18;
     padding-bottom: 243px;
 }
 
-.threeMiddle_blocks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
+.inprint_industries {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 .perspective_agency {
