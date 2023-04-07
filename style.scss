@@ -246,11 +246,19 @@ a {
 
 .grid_middleContent {
     display: grid;
-    grid-template-columns: 362px 362px 1fr;
-    grid-template-rows: 389px 389px;
+    grid-template-columns: repeat(3, 362px);
+    grid-template-rows: repeat(2, 389px);
     gap: 30px;
     background-color: #020a18;
     padding-bottom: 243px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0px;
+}
+
+p {
+    margin-bottom: 0px;
 }
 
 .inprint_industries {
@@ -349,6 +357,25 @@ a {
 }
 
 .value_results:hover {
+    transform: scale(1.2);
+    background-color: $buttonColor_main;
+}
+
+.value_results2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: $backgroundColor_card;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.value_results2:hover {
     transform: scale(1.2);
     background-color: $buttonColor_main;
 }
@@ -510,26 +537,18 @@ a {
         justify-content: center;
     }
 
+    .grid_middleContent {
+        grid-template-columns: repeat(1, 362px);
+        grid-template-rows: repeat(3, 389px);
+        justify-content: center;
+    }
+
     .w-100 {
         width: 594px ! important;
     }
 
     .apply_AI {
         width: 538px;
-    }
-
-    .threeMiddle_blocks {
-        flex-direction: column;
-        align-content: center;
-        gap: 32px
-    }
-
-    .inprint_industries {
-        display: none;
-    }
-
-    .threeLast_blocks {
-        display: none;
     }
 
     .clientsMain_review {
@@ -554,6 +573,24 @@ a {
     }
 
 }
+
+
+@media (max-width: 849px) {
+    .center {
+        padding-left: calc(50% - 315px);
+        padding-right: calc(50% - 315px);
+    }
+
+    .inprint_industries {
+        display: none;
+    }
+
+    .value_results {
+        display: none;
+    }
+
+}
+
 
 @media (max-width: 831px) {
     .center {
@@ -712,21 +749,17 @@ a {
         transform: none;
     }
 
-    .value_results:hover {
+    .value_results2:hover {
         transform: none;
-    }
-
-    .middle_content {
-        padding-bottom: 96px;
-    }
-
-    .threeMiddle_blocks {
-        margin-bottom: 0px;
     }
 
     .clientsMain_review {
         flex-direction: column;
         align-content: center;
+        padding-bottom: 96px;
+    }
+
+    .grid_middleContent {
         padding-bottom: 96px;
     }
 
